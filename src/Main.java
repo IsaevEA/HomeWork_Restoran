@@ -50,9 +50,11 @@ public class Main {
         restaurant.placeOrder(order3);
 
         restaurant.infoOrder();
-        System.out.println(restaurant.getOrderById(20));
-        restaurant.completeOrder(15);
-        System.out.println(restaurant.getOrderById(20));
+        System.out.println(restaurant.getOrderById(3));
+        restaurant.completeOrder(3);
+        System.out.println(restaurant.getOrderById(3));
+
+
 
     }
 }

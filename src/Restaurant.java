@@ -19,23 +19,23 @@ public class Restaurant {
         orders.add(order);
     }
     public Order getOrderById(int orderId){
-        for (Order o:orders) {
-            if (o.getOrderId() == orderId){
-                return o;
+        for (int i = 0; i < orders.size(); i++) {
+            if (orders.get(i).getOrderId() == orderId){
+                return orders.get(i);
             }
         }
         throw  new NoSuchElementException("Заказ с ID " + orderId + " не найден, класс Restaurant, метод getOrderById");
 
     }
 
-    public void completeOrder(int orderId) throws Exception{
-        for (Order o : orders) {
-            if (o.getOrderId() == orderId) {
-                o.setCompleted(true);
+    public void completeOrder(int orderId) {
+        for (int i = 0; i < orders.size(); i++) {
+            if (orders.get(i).getOrderId() == orderId) {
+                orders.get(i).setCompleted(true);
+                return;
             }
         }
         throw new NoSuchElementException("Заказ с ID " + orderId + " не найден, класс Restaurant, метод completeOrder");
-
     }
 
 
